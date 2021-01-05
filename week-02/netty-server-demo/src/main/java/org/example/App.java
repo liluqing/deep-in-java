@@ -31,8 +31,6 @@ public class App
 
 
     public static void main( String[] args ) throws InterruptedException {
-        final ByteBuf buf = Unpooled.unreleasableBuffer(
-                Unpooled.copiedBuffer("Hi!\r\n", Charset.forName("UTF-8")));
 
         EventLoopGroup bossGroup = new NioEventLoopGroup(3);
         EventLoopGroup workerGroup = new NioEventLoopGroup(100);
